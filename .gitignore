@@ -1,0 +1,15 @@
+
+# ignore node stuff
+node_modules
+npm-debug.log
+vendor
+tmp
+
+# ignore hidden stuff
+*.sublime-project
+*.sublime-workspace
+.sass-cache/
+.DS_Store
+
+# ignore the public folder
+public/
