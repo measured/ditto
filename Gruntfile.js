@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
- 
+
     // Night gathers, and now my grunt watch begins...
     watch: {
 
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
 
-      html: { 
+      html: {
         // watch the handlebars files for HTML changes
         files: 'project/**/*.{html,hbs,json}',
         tasks: ['clean:html', 'assemble:dev', 'assemble:production']
@@ -52,9 +52,15 @@ module.exports = function(grunt) {
         // copy all the asset files that are left
         files: ['assets/**/*', '!assets/sass/**/*', '!assets/js/**/*'],
         tasks: ['copy:assets', 'copy:production_assets']
+      },
+
+      grunticon: {
+        // watch for changes in the icon folder
+        files: 'assets/icons/*.svg',
+        tasks: ['grunticon']
       }
     },
- 
+
   // --------------------------------------------------------------------------------- \\
 
     sass: {
@@ -84,11 +90,11 @@ module.exports = function(grunt) {
       js: {
         files: [
           {
-            expand: true, 
-            flatten: true, 
+            expand: true,
+            flatten: true,
             cwd: 'assets/js/',
-            src: ['**'], 
-            dest: 'public/dev/assets/js/', 
+            src: ['**'],
+            dest: 'public/dev/assets/js/',
             filter: 'isFile'
           }
         ]
@@ -96,10 +102,10 @@ module.exports = function(grunt) {
       assets: {
         files: [
           {
-            expand: true, 
-            cwd: 'assets/', 
-            src: ['**', '!sass/**/*', '!js/**/*'], 
-            dest: 'public/dev/assets/', 
+            expand: true,
+            cwd: 'assets/',
+            src: ['**', '!sass/**/*', '!js/**/*'],
+            dest: 'public/dev/assets/',
             filter: 'isFile'
           }
         ]
@@ -107,10 +113,10 @@ module.exports = function(grunt) {
       production_assets: {
         files: [
         {
-            expand: true, 
-            cwd: 'public/dev/assets/', 
-            src: ['**', '!css/**/*', '!js/**/*'], 
-            dest: 'public/production/assets/', 
+            expand: true,
+            cwd: 'public/dev/assets/',
+            src: ['**', '!css/**/*', '!js/**/*'],
+            dest: 'public/production/assets/',
             filter: 'isFile'
           }
         ]
@@ -118,10 +124,10 @@ module.exports = function(grunt) {
       css: {
         files: [
           {
-            expand: true, 
-            cwd: 'public/dev/assets/css', 
-            src: ['**', '!*.map'], 
-            dest: 'public/production/assets/css/', 
+            expand: true,
+            cwd: 'public/dev/assets/css',
+            src: ['**', '!*.map'],
+            dest: 'public/production/assets/css/',
             filter: 'isFile'
           }
         ]
@@ -129,10 +135,10 @@ module.exports = function(grunt) {
       sass: {
         files: [
           {
-            expand: true, 
-            cwd: 'assets/sass/', 
-            src: ['**/*'], 
-            dest: 'public/dev/assets/sass/', 
+            expand: true,
+            cwd: 'assets/sass/',
+            src: ['**/*'],
+            dest: 'public/dev/assets/sass/',
             filter: 'isFile'
           }
         ]
@@ -142,7 +148,7 @@ module.exports = function(grunt) {
   // --------------------------------------------------------------------------------- \\
 
     assemble: {
-      
+
       options: {
         helpers: '_admin/helpers/helper-*.js',
         data: 'project/data/**/*.{json,yml}',
@@ -159,14 +165,14 @@ module.exports = function(grunt) {
         },
 
         files: [
-          { expand: true, 
-            cwd: 'project/pages', 
-            src: '**/*.hbs', 
-            dest: 'public/dev/' 
+          { expand: true,
+            cwd: 'project/pages',
+            src: '**/*.hbs',
+            dest: 'public/dev/'
           },
         ]
       },
-      
+
       production: {
         // Assemble project HTML files
         options: {
@@ -178,15 +184,15 @@ module.exports = function(grunt) {
         },
 
         files: [
-          { expand: true, 
-            cwd: 'project/pages', 
-            src: '**/*.hbs', 
-            dest: 'public/production/' 
+          { expand: true,
+            cwd: 'project/pages',
+            src: '**/*.hbs',
+            dest: 'public/production/'
           },
         ]
       }
     },
- 
+
   // --------------------------------------------------------------------------------- \\
 
     autoprefixer: {
@@ -195,7 +201,28 @@ module.exports = function(grunt) {
         dest: 'public/dev/assets/css/application.css'
       }
     },
- 
+
+  // --------------------------------------------------------------------------------- \\
+
+    grunticon: {
+      icons: {
+        files: [{
+            expand: true,
+            cwd: 'assets/icons/svg/',
+            src: ['*.svg', '*.png'],
+            dest: "assets/icons"
+        }],
+        options: {
+          cssprefix: '.i-',
+          // define vars that can be used in filenames if desirable, e.g. foo.colors-primary-secondary.svg
+          // colors: {
+          //   primary: "red",
+          //   secondary: "#666"
+          // }
+        }
+      }
+    },
+
   // --------------------------------------------------------------------------------- \\
 
     clean: {
@@ -218,6 +245,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-grunticon');
 
   // Default task to be run.
   grunt.registerTask('default', ['clean:all', 'assemble', 'sass', 'concat', 'autoprefixer', 'copy']);
