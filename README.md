@@ -1,21 +1,18 @@
 # Idealogue Static Boilerplate
 
-Static Html boilerplate running on Node.js
+Static HTML boilerplate running on Node.js
 
 - assemble.io
 - handlebars template (.hbs)
 - sasslang css (.scss)
 - simple js setup
+- grunticon
 
-## Simple Install Instructions
+## Development
 
-$ **cd "project directory"**
+How to set up your local development environment, after cloning the repository.
 
-$ **npm install** _// Grab node dependencies_
-
-$ **grunt** _// Build the project (public folder)_
-
-$ **grunt watch** _// Watch for changes with grunt_
-
-$ **node server**  _// Load the server_
-
+1. `npm install`
+2. `grunt`
+3. `grunt watch`
+4. `node server`
