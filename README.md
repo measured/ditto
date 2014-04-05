@@ -24,8 +24,8 @@
 ## To do
 
 - ~~Add Grunticon~~
-- Set up Grunt s3
-- Update libs
+- ~~Set up Grunt s3~~
+- Update libs?
 
 ## Authors
 
