@@ -13,6 +13,7 @@
   * [Fastclick](https://github.com/ftlabs/fastclick)
   * [Transit](https://github.com/rstacruz/jquery.transit)
 - [Grunticon](https://github.com/filamentgroup/grunticon)
+- [Grunt-aws](https://github.com/jpillora/grunt-aws)
 
 ## Getting started
 
@@ -20,6 +21,10 @@
 - Build the project: `grunt`
 - When you're ready to start tinkering, watch for changes: `grunt watch`
 - Finally, fire up the static server: `node server`
+
+## Deployment
+
+For rapid deployment, use Amazon S3. Once you have created a bucket, put the relevant details (name, keys, region etc.) into the `credentials.json` file located in the root directory.
 
 ## To do
 
