@@ -30,7 +30,8 @@ For rapid deployment, use Amazon S3. Once you have created a bucket, put the rel
 
 - ~~Add Grunticon~~
 - ~~Set up Grunt s3~~
-- Update libs?
+- ~~Update libs~~
+- Investigate a way of cloning Ditto into a new repo without Git crud
 
 ## Authors
 
