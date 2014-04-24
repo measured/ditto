@@ -1101,6 +1101,45 @@
           }
         }
       }
+    },
+    "grunt-aws": {
+      "version": "0.3.0",
+      "from": "grunt-aws@",
+      "dependencies": {
+        "mime": {
+          "version": "1.2.11",
+          "from": "mime@~1.2.11"
+        },
+        "async": {
+          "version": "0.2.10",
+          "from": "async@~0.2.9"
+        },
+        "lodash": {
+          "version": "1.3.1",
+          "from": "lodash@~1.3.1"
+        },
+        "aws-sdk": {
+          "version": "1.12.0",
+          "from": "aws-sdk@~1.12.0",
+          "dependencies": {
+            "xml2js": {
+              "version": "0.2.4",
+              "from": "xml2js@0.2.4",
+              "dependencies": {
+                "sax": {
+                  "version": "0.6.0",
+                  "from": "sax@>=0.4.2"
+                }
+              }
+            },
+            "xmlbuilder": {
+              "version": "0.4.2",
+              "from": "xmlbuilder@0.4.2",
+              "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-0.4.2.tgz"
+            }
+          }
+        }
+      }
     }
   }
 }
