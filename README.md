@@ -24,7 +24,10 @@
 
 ## Deployment
 
-For rapid deployment, use Amazon S3. Once you have created a bucket, put the relevant details (name, keys, region etc.) into the `credentials.json` file located in the root directory.
+For rapid deployment, Ditto uses Amazon Web Services (AWS)
+- Create a bucket on your AWS account
+- Put the relevant details (name, keys, region etc.) into the `credentials.json` file located in the root directory
+- `grunt s3` to deploy
 
 ## To do
 
