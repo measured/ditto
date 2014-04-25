@@ -1,9 +1,9 @@
 {
-  "name": "id_static",
+  "name": "ditto",
   "description": "Idealogue Static Boilerplate",
-  "version": "0.0.0",
-  "homepage": "http://idealogue.io",
-  "repository": "https://github.com/idealogue/static_boilerplate",
+  "version": "0.1.0",
+  "homepage": "https://github.com/idealogue/ditto",
+  "repository": "https://github.com/idealogue/ditto",
   "author": {
     "name": "Idealogue",
     "url": "http://idealogue.io"
@@ -15,7 +15,7 @@
     },
     {
       "name": "Ben Jennings",
-      "url": "https://benjennin.gs"
+      "url": "https://github.com/jenbennings"
     }
   ],
   "engines": {
