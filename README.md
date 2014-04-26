@@ -25,12 +25,12 @@
 ## Deployment
 
 For rapid deployment, Ditto uses Amazon Web Services (AWS)
-- Create a bucket on your AWS account
+- Create an s3 bucket on your AWS account
 - Create a `credentials.json` file in the root folder
 - Put the relevant details (name, keys, region etc.)
 - `grunt s3` to deploy
 
-**note:** The credentials file is ignored by git so that you don't accidently publish your private aws keys to a public repo. That means if you're sharing a project you'll need to get each person to setup a credentials file on their local machine
+**note:** The credentials file is ignored by git so that you don't accidently publish your private aws keys to a public repo. That means if you're sharing a project you'll need to get each person to setup a credentials file on their local machine.
 
 Example credentials:
 
