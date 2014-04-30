@@ -57,7 +57,7 @@ module.exports = function(grunt) {
       grunticon: {
         // watch for changes in the icon folder
         files: 'assets/icons/svg/*.svg',
-        tasks: ['grunticon:icons']
+        tasks: ['grunticon']
       }
     },
 
