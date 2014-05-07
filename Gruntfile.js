@@ -210,7 +210,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'assets/icons/svg/',
             src: ['*.svg', '*.png'],
-            dest: "assets/icons"
+            dest: 'assets/icons'
         }],
         options: {
           cssprefix: '.i-',
@@ -232,18 +232,18 @@ module.exports = function(grunt) {
 
   // --------------------------------------------------------------------------------- \\
 
-    aws: grunt.file.readJSON("credentials.json"),
+    aws: grunt.file.readJSON('credentials.json'),
 
     s3: {
       options: {
-        accessKeyId: "<%= aws.accessKeyId %>",
-        secretAccessKey: "<%= aws.secretAccessKey %>",
-        bucket: "<%= aws.bucketName %>",
-        region: "<%= aws.bucketRegion %>"
+        accessKeyId: '<%= aws.accessKeyId %>',
+        secretAccessKey: '<%= aws.secretAccessKey %>',
+        bucket: '<%= aws.bucketName %>',
+        region: '<%= aws.bucketRegion %>'
       },
       build: {
-        cwd: "public/production/",
-        src: "**"
+        cwd: 'public/production/',
+        src: '**'
       }
     }
   });
