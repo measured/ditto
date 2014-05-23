@@ -18,6 +18,7 @@
 ## Getting started
 
 - After cloning the repository, `cd` into the folder and grab the node dependencies: `npm install`
+- Create a credentials.json file in the root folder (see below) - this doesn't need correct details yet, it's just so that grunt doesn't wig out over the missing file.
 - Build the project: `grunt`
 - When you're ready to start tinkering, watch for changes: `grunt watch`
 - Finally, fire up the static server: `node server`
