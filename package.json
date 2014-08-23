@@ -1,12 +1,12 @@
 {
   "name": "ditto",
-  "description": "Idealogue Static Boilerplate",
+  "description": "A Static Boilerplate",
   "version": "0.1.0",
-  "homepage": "https://github.com/idealogue/ditto",
-  "repository": "https://github.com/idealogue/ditto",
+  "homepage": "https://github.com/measured/ditto",
+  "repository": "https://github.com/measured/ditto",
   "author": {
-    "name": "Idealogue",
-    "url": "http://idealogue.io"
+    "name": "Measured",
+    "url": "http://measured.com.au"
   },
   "contributors": [
     {
